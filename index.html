@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JV Traders - Sand Supplier Bangalore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -44,73 +46,105 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
     </style>
-</head>
-<body class="bg-gray-50">
-    <!-- Header & Navigation Bar -->
-    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-lg">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <div class="flex items-center space-x-2">
-                    <a href="#">
-                        <img src="images/Logo.jpg" alt="JV Traders Logo" class="h-10 w-auto">
-                    </a>
-                    <span class="text-2xl font-bold text-white bg-blue-900 px-3 py-1 rounded-lg">JV TRADERS</span>
-                </div>
-                
-                <!-- Navigation -->
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-sand font-semibold transition">Home</a>
-                    <a href="#products" class="text-gray-700 hover:text-sand font-semibold transition">Products</a>
-                    <a href="#vehicles" class="text-gray-700 hover:text-sand font-semibold transition">Vehicles</a>
-                    <a href="#about" class="text-gray-700 hover:text-sand font-semibold transition">About</a>
-                    <a href="#contact" class="text-gray-700 hover:text-sand font-semibold transition">Contact</a>
-                </nav>
-                
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-sand" aria-label="Toggle mobile menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-            
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200 absolute top-full left-0 right-0 shadow-lg">
-                <div class="px-6 py-4 space-y-4">
-                    <a href="#home" class="block text-gray-700 hover:text-sand font-semibold transition">Home</a>
-                    <a href="#products" class="block text-gray-700 hover:text-sand font-semibold transition">Products</a>
-                    <a href="#vehicles" class="block text-gray-700 hover:text-sand font-semibold transition">Vehicles</a>
-                    <a href="#about" class="block text-gray-700 hover:text-sand font-semibold transition">About</a>
-                    <a href="#contact" class="block text-gray-700 hover:text-sand font-semibold transition">Contact</a>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <!-- Section 1: Home - Welcome Mat -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <img src="images/HomePhoto.jpg" 
-            alt="Large pile of high-quality construction sand" 
-            class="absolute inset-0 w-full h-full object-cover">
-        <div class="relative z-10 text-center text-white px-4">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight tracking-tight">
-                Quality Sand, Delivered On Time.
-            </h1>
-            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-200">
-                Your trusted supplier for construction, landscaping, and specialty sand in the greater metro area.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#contact" class="bg-yellow-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-yellow-600 transition shadow-lg text-lg">
-                    Request a Free Quote
+    <style>
+        nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #dee0e6;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+    </style>
+</head>
+
+
+
+
+<body class="bg-gray-50">
+   <!-- Header & Navigation Bar -->
+<header id="header" class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 shadow-xl border-b border-gray-200">
+    <div class="container mx-auto px-6 py-3">
+        <div class="flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <a href="#">
+                    <img src="images/Logo.jpg" alt="JV Traders Logo" class="h-10 w-auto rounded-md shadow-sm border border-gray-200">
                 </a>
-                <a href="#products" class="bg-white text-gray-800 font-semibold px-8 py-4 rounded-lg hover:bg-gray-200 transition shadow-lg text-lg">
-                    See Our Products
-                </a>
+                <span class="text-2xl font-extrabold tracking-wide text-white bg-blue-900/90 px-3 py-1 rounded-lg shadow-md transition hover:scale-105 hover:bg-blue-900 hover:text-white">
+                    JV TRADERS
+                </span>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="text-gray-700 hover:text-blue-900 font-medium transition-all">Home</a>
+                <a href="#products" class="text-gray-700 hover:text-blue-900 font-medium transition-all">Products</a>
+                <a href="#vehicles" class="text-gray-700 hover:text-blue-900 font-medium transition-all">Vehicles</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-900 font-medium transition-all">About</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-900 font-medium transition-all">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 hover:text-blue-900 transition" aria-label="Toggle mobile menu">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white/90 border-t border-gray-200 rounded-b-xl shadow-md transition-all duration-300">
+            <div class="px-6 py-4 space-y-4">
+                <a href="#home" class="block text-gray-700 hover:text-blue-900 font-semibold">Home</a>
+                <a href="#products" class="block text-gray-700 hover:text-blue-900 font-semibold">Products</a>
+                <a href="#vehicles" class="block text-gray-700 hover:text-blue-900 font-semibold">Vehicles</a>
+                <a href="#about" class="block text-gray-700 hover:text-blue-900 font-semibold">About</a>
+                <a href="#contact" class="block text-gray-700 hover:text-blue-900 font-semibold">Contact</a>
             </div>
         </div>
-    </section>
+    </div>
+</header>
+
+
+  <!-- Section 1: Home - Welcome Mat -->
+<section id="home" class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+    <!-- Background Image with Overlay -->
+    <img src="images/HomePhoto.jpg" alt="High-quality construction sand"
+         class="absolute inset-0 w-full h-full object-cover brightness-75">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto animate__animated animate__fadeInUp">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight tracking-tight drop-shadow-lg">
+            Quality Sand, <br class="hidden md:block" /> Delivered On Time.
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200 mb-8">
+            Your trusted supplier for construction, landscaping, and specialty sand across the metro area.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#contact" class="bg-yellow-500 text-white font-bold px-8 py-4 rounded-full hover:bg-yellow-600 transition shadow-lg text-lg">
+                📦 Request a Free Quote
+            </a>
+            <a href="#products" class="bg-white text-gray-800 font-bold px-8 py-4 rounded-full hover:bg-gray-100 transition shadow-lg text-lg">
+                📋 See Our Products
+            </a>
+        </div>
+    </div>
+</section>
+
 
 
 
@@ -586,19 +620,32 @@
                 <button onclick="sendWhatsAppToBoth('Hi, I need a 45–50 Ton Vehicle for delivery')" class="block w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition">💬 WhatsApp Us</button>
             </div>
 
-            <!-- 50 - 55 Ton Vehicle -->
-            <div class="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl animate__animated animate__fadeInUp" style="animation-delay: 0.7s;">
-                <div class="text-center mb-4">
-                    <div class="text-4xl mb-2">🚚</div>
-                    <h3 class="text-xl font-bold text-gray-800">50 – 55 Ton Vehicle</h3>
-                </div>
-                <div class="w-full aspect-[16/9] overflow-hidden rounded-lg mb-4">
-                    <img src="images/50 - 55 Ton vehicle.jpg" alt="50-55 Ton Vehicle" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-                </div>
-                <p class="text-gray-600 mb-4 text-center">Max-capacity trailers for industrial and mining logistics.</p>
-                <button onclick="sendWhatsAppToBoth('Hi, I need a 50–55 Ton Vehicle for delivery')" class="block w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition">💬 WhatsApp Us</button>
-            </div>
+<!-- 50 - 55 Ton Vehicle -->
+<div class="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl animate__animated animate__fadeInUp" style="animation-delay: 0.7s;">
+    <div class="text-center mb-4">
+        <div class="text-4xl mb-2">🚚</div>
+        <h3 class="text-xl font-bold text-gray-800">50 – 55 Ton Vehicle</h3>
+    </div>
+
+    <div class="relative w-full aspect-[16/9] overflow-hidden rounded-lg mb-4 carousel" data-index="0">
+        <!-- Slides -->
+        <div class="carousel-slide absolute inset-0 opacity-100 transition-opacity duration-500">
+            <img src="images/50 - 55 Ton vehicle.jpg" alt="50-55 Ton 1" class="w-full h-full object-cover">
         </div>
+        <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-500">
+            <img src="images/55ton vehicle.jpg" alt="55ton vehicle" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Buttons -->
+        <button class="carousel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full">‹</button>
+        <button class="carousel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full">›</button>
+    </div>
+
+    <p class="text-gray-600 mb-4 text-center">Max-capacity trailers for industrial and mining logistics.</p>
+    <button onclick="sendWhatsAppToBoth('Hi, I need a 50–55 Ton Vehicle for delivery')" class="block w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition">💬 WhatsApp Us</button>
+</div>
+
+
     </div>
 </section>
 
@@ -617,185 +664,248 @@
 </script>
 
 
-    <!-- Section 3: About Us -->
-    <section id="about" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
-                    <img src="images/Team.jpg"
-                         alt="Company trucks and team members"
-                         class="rounded-lg shadow-xl w-full h-72 md:h-96 object-cover object-center">
-                </div>
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Your Reliable Local Sand Supplier</h2>
-                    <p class="text-gray-600 text-lg mb-4">
-                        Serving the community for over 20 years, JV Traders has built a reputation for quality materials and dependable delivery. We pride ourselves on being a partner to contractors, landscapers, and homeowners alike.
-                    </p>
-                    <p class="text-gray-600 text-lg">
-                        Our commitment is simple: provide the best possible sand for your project, delivered safely and on schedule. We proudly serve Bangalore and all surrounding areas.
-                    </p>
-                    
-                    <!-- Team Information -->
-                    <div class="mt-8 bg-white rounded-xl shadow-lg p-6">
-                        <div class="flex items-center justify-center mb-6">
-                            <div class="w-24 h-24 bg-sand rounded-full flex items-center justify-center text-4xl font-bold text-white mr-6">
-                            </div>
-                            <div class="text-left">
-                                <h3 class="text-2xl font-bold text-gray-800">Manjunath</h3>
-                                <p class="text-gray-600">Founder & CEO</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-700 leading-relaxed">
-                            With 18+ years of experience in the construction materials industry, Manjunath has built JV Traders into one of Bangalore's most reliable sand suppliers. Our commitment to quality, transparency, and customer satisfaction has made us the preferred choice for contractors, builders, and individuals across the city.
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <!-- Include AOS styles in <head> -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- Section 3: About Us -->
+<section id="about" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <!-- Image -->
+      <div class="md:w-1/2" data-aos="fade-right" data-aos-duration="1000">
+        <img src="images/Team.jpg"
+             alt="Company trucks and team members"
+             class="rounded-lg shadow-xl w-full h-72 md:h-96 object-cover object-center transition-transform duration-700 hover:scale-105">
+      </div>
+
+      <!-- Text -->
+      <div class="md:w-1/2" data-aos="fade-left" data-aos-duration="1000">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Your Reliable Local Sand Supplier</h2>
+        <p class="text-gray-600 text-lg mb-4 transition-opacity duration-500">
+          Serving the community for over 20 years, JV Traders has built a reputation for quality materials and dependable delivery. We pride ourselves on being a partner to contractors, landscapers, and homeowners alike.
+        </p>
+        <p class="text-gray-600 text-lg transition-opacity duration-500 delay-100">
+          Our commitment is simple: provide the best possible sand for your project, delivered safely and on schedule. We proudly serve Bangalore and all surrounding areas.
+        </p>
+
+        <!-- Team Information -->
+        <div class="mt-8 bg-white rounded-xl shadow-lg p-6 space-y-4" data-aos="zoom-in-up" data-aos-delay="100">
+          <div class="text-center md:text-left">
+            <h3 class="text-2xl font-bold text-gray-800">Manjunath</h3>
+            <p class="text-gray-600 mb-4">Founder & CEO</p>
+            <p class="text-gray-700 leading-relaxed">
+              With 18+ years of experience in the construction materials industry, Manjunath has built JV Traders into one of Bangalore's most reliable sand suppliers. Our commitment to quality, transparency, and customer satisfaction has made us the preferred choice for contractors, builders, and individuals across the city.
+            </p>
+          </div>
         </div>
-    </section> 
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Include AOS script at the bottom of your HTML before </body> -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 
     <!-- Section 4: Contact & Quote Request -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Get a Free Quote Today</h2>
-                <p class="text-lg text-gray-600 mt-2">Fill out the form below or give us a call.</p>
-            </div>
+<section id="contact" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Get a Free Quote Today</h2>
+      <p class="text-lg text-gray-600 mt-2">Fill out the form or message us directly on WhatsApp.</p>
+    </div>
 
-            <div class="max-w-4xl mx-auto bg-gray-50 p-8 rounded-lg shadow-lg">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <!-- Contact Form -->
-                    <form id="quoteForm">
-                        <div class="space-y-4">
-                            <input type="text" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none">
-                            <input type="tel" placeholder="Phone Number" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none">
-                            <input type="email" placeholder="Your@gmail.com" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none">
-                            <select required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none text-gray-500" aria-label="Select sand type">
-                                <option value="" disabled selected>Select Sand Type</option>
-                                <option value="concrete">River Sand</option>
-                                <option value="masonry">Play Sand</option>
-                                <option value="play">Grounds Sand</option>
-                                <option value="play">Sea Sand</option>
-                                <option value="play">Others</option>
-                            </select>
-                            <input type="text" placeholder="Estimated Quantity (e.g., tons, yards)" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none">
-                            <textarea placeholder="Delivery Address & Project Notes" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none"></textarea>
-                            <button type="submit" class="w-full bg-yellow-500 text-white font-semibold p-4 rounded-lg hover:bg-yellow-600 transition shadow-md">
-                                Submit Quote Request
-                            </button>
-                        </div>
-                    </form>
-
-                    <!-- Direct Contact Info -->
-                    <div class="space-y-6">
-                        <!-- Contact Information -->
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Contact Information</h3>
-                            <p class="text-gray-600 text-lg">
-                                <strong>Phone:</strong>
-                                <a href="tel:+919845208446" class="text-yellow-600 hover:underline">9845208446</a>,
-                                <a href="tel:+919164650985" class="text-yellow-600 hover:underline">9164650985</a>,
-                                <a href="tel:+919844071339" class="text-yellow-600 hover:underline">9844071339</a>
-                            </p>
-                            <p class="text-gray-600 text-lg">
-                                <strong>Email:</strong>
-                                <a href="mailto:jvtraders98@gmail.com" class="text-yellow-600 hover:underline">jvtraders98@gmail.com</a>
-                            </p>
-                        </div>
-
-                        <!-- Business Hours -->
-                        <div class="flex items-start gap-2">
-                            <svg class="w-6 h-6 text-yellow-500 mt-1" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-900 mb-1">Business Hours</h3>
-                                <p class="text-gray-600 text-lg"><strong>Mon – Sun:</strong> Open 24 Hours</p>
-                            </div>
-                        </div>
-
-                        <!-- Service Area & GSTIN -->
-                        <div class="space-y-4">
-                            <div class="p-3 bg-purple-50 rounded-lg">
-                                <p class="text-purple-700 font-semibold">📍 Service Area</p>
-                                <p class="text-purple-600">All over Bangalore</p>
-                            </div>
-                            <div class="p-3 bg-gray-50 rounded-lg">
-                                <p class="text-gray-700 font-semibold">🏢 GSTIN</p>
-                                <p class="text-gray-600">29CFHPM8783C1ZY</p>
-                            </div>
-                        </div>
-
-                        <!-- Full Address -->
-                        <div class="bg-gradient-to-r from-sand to-yellow-500 rounded-lg p-4 text-white">
-                            <h4 class="text-lg font-bold mb-2">JV Traders – River Sand Supplier</h4>
-                            <p class="text-sm">31, Ground Floor, NG Gollahalli,</p>
-                            <p class="text-sm">Hennur Main Rd, Dodda Gubbi,</p>
-                            <p class="text-sm">Bengaluru, Karnataka – 560077, India</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="max-w-5xl mx-auto bg-white p-8 rounded-3xl shadow-2xl grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- Contact Form -->
+      <div class="space-y-4" id="quoteForm">
+        <div>
+          <input type="text" id="name" placeholder="Your Name *" required
+            class="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
         </div>
-    </section> 
-
-    <!-- Google Maps Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Find Us on Google Maps</h2>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <iframe
-                        src="https://www.google.com/maps?q=JV+TRADERS+River+Sand+Supplier,+31,+Ground+Floor,+NG+Gollahalli,+Hennur+Main+Rd,+Dodda+Gubbi,+Bengaluru,+Karnataka+560077&output=embed"
-                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-                
-                <div class="text-center mt-6">
-                    <a href="https://maps.app.goo.gl/2b9teb27gZovpE1AA?g_st=aw" target="_blank" rel="noopener noreferrer"
-                        class="inline-block px-6 py-3 bg-yellow-500 text-white font-semibold rounded-lg shadow hover:bg-yellow-600 transition">
-                        📍 Open in Google Maps
-                    </a>
-                </div>
-            </div>
+        <div>
+          <input type="tel" id="phone" placeholder="Phone Number *" required
+            class="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white">
-        <div class="container mx-auto px-6 py-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <!-- Left Section: Logo + Name -->
-                <div class="flex items-center space-x-3 text-center md:text-left mb-4 md:mb-0">
-                    <img src="images/Logo.jpg" alt="JV Traders Logo" class="h-10 w-auto">
-                    <div>
-                        <p class="text-xl font-bold">JV Traders</p>
-                        <p class="text-gray-400">© 2025 JV Traders. All Rights Reserved.</p>
-                    </div>
-                </div>
-                
-                <!-- Right Section: Contact Info -->
-                <div class="text-center md:text-right">
-                    <p class="text-gray-300">
-                        Call Us: 
-                        <a href="tel:9845208446,9844071339" class="hover:text-yellow-400">
-                            9164650985, 9845208446, 9844071339
-                        </a>
-                    </p>
-                    <p class="text-gray-300">
-                        Email: 
-                        <a href="mailto:jvtraders98@gmail.com" class="hover:text-yellow-400">
-                            jvtraders98@gmail.com
-                        </a>
-                    </p>
-                </div>
-            </div>
+        <div>
+          <select id="sandType" required
+            class="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:outline-none text-gray-500">
+            <option value="" disabled selected>Select Sand Type *</option>
+            <option value="River Sand">River Sand</option>
+            <option value="Play Sand">Play Sand</option>
+            <option value="Grounds Sand">Grounds Sand</option>
+            <option value="Sea Sand">Sea Sand</option>
+            <option value="Others">Others</option>
+          </select>
         </div>
-    </footer>
+        <div>
+          <input type="text" id="quantity" placeholder="Estimated Quantity (e.g., tons, yards)"
+            class="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:outline-none" />
+        </div>
+        <div>
+          <textarea id="notes" placeholder="Delivery Address & Project Notes" rows="4"
+            class="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:outline-none"></textarea>
+        </div>
+
+        <!-- WhatsApp Button -->
+        <button onclick="sendWhatsApp()" class="w-full bg-green-500 text-white text-center font-semibold p-4 rounded-xl hover:bg-green-600 transition shadow-md">
+          💬 Message Us on WhatsApp
+        </button>
+      </div>
+
+      <!-- Direct Contact Info -->
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">📞 Contact Information</h3>
+          <p class="text-gray-600 text-lg">
+            <strong>Phone:</strong><br />
+            <a href="tel:+919845208446" class="text-yellow-600 hover:underline">9845208446</a><br />
+            <a href="tel:+919164650985" class="text-yellow-600 hover:underline">9164650985</a><br />
+            <a href="tel:+919844071339" class="text-yellow-600 hover:underline">9844071339</a>
+          </p>
+          <p class="text-gray-600 text-lg">
+            <strong>Email:</strong><br />
+            <a href="mailto:jvtraders98@gmail.com" class="text-yellow-600 hover:underline">jvtraders98@gmail.com</a>
+          </p>
+        </div>
+
+        <!-- Business Hours -->
+        <div class="flex items-start gap-2">
+          <svg class="w-6 h-6 text-yellow-500 mt-1" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-1">Business Hours</h3>
+            <p class="text-gray-600 text-lg"><strong>Mon – Sun:</strong> Open 24 Hours</p>
+          </div>
+        </div>
+
+        <!-- Location & GSTIN -->
+        <div class="space-y-4">
+          <div class="p-4 bg-blue-50 rounded-xl">
+            <p class="text-blue-700 font-semibold">📍 Service Area</p>
+            <p class="text-blue-600">All over Bangalore</p>
+          </div>
+          <div class="p-4 bg-gray-100 rounded-xl">
+            <p class="text-gray-700 font-semibold">🏢 GSTIN</p>
+            <p class="text-gray-600">29CFHPM8783C1ZY</p>
+          </div>
+        </div>
+
+        <!-- Address -->
+        <div class="bg-gradient-to-r from-yellow-500 to-yellow-400 rounded-xl p-4 text-white shadow-lg">
+          <h4 class="text-lg font-bold mb-1">JV Traders – River Sand Supplier</h4>
+          <p class="text-sm">31, Ground Floor, NG Gollahalli,</p>
+          <p class="text-sm">Hennur Main Rd, Dodda Gubbi,</p>
+          <p class="text-sm">Bengaluru, Karnataka – 560077, India</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Google Maps Section with Side-by-Side Layout -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Find Us on Google Maps</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <!-- Left: Image -->
+      <div>
+        <img src="images/location-banner.jpg" alt="Location view"
+             class="w-full h-auto rounded-xl shadow-lg object-cover">
+      </div>
+
+      <!-- Right: Map + Button -->
+      <div class="space-y-6">
+        <div class="rounded-xl shadow-lg overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps?q=JV+TRADERS+River+Sand+Supplier,+31,+Ground+Floor,+NG+Gollahalli,+Hennur+Main+Rd,+Dodda+Gubbi,+Bengaluru,+Karnataka+560077&output=embed"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <div class="text-center md:text-left">
+          <a href="https://maps.app.goo.gl/2b9teb27gZovpE1AA?g_st=aw" target="_blank" rel="noopener noreferrer"
+            class="inline-block px-6 py-3 bg-yellow-500 text-white font-semibold rounded-lg shadow hover:bg-yellow-600 transition">
+            📍 Open in Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- WhatsApp Script -->
+<script>
+  function sendWhatsApp() {
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const sandType = document.getElementById("sandType").value;
+    const quantity = document.getElementById("quantity").value.trim();
+    const notes = document.getElementById("notes").value.trim();
+
+    if (!name || !phone || !sandType) {
+      alert("Please fill all required fields (*)");
+      return;
+    }
+
+    const message = `Hello JV Traders,%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Sand Type:* ${sandType}%0A*Quantity:* ${quantity || 'N/A'}%0A*Address/Notes:* ${notes || 'N/A'}`;
+    const whatsappUrl = `https://wa.me/919845208446?text=${message}`;
+    window.open(whatsappUrl, "_blank");
+  }
+</script>
+
+
+
+   <!-- Footer -->
+<footer class="bg-gray-900 text-white">
+  <div class="container mx-auto px-6 py-10">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+
+      <!-- Left: Logo + Brand -->
+      <div class="flex items-center space-x-4 text-center md:text-left">
+        <img src="images/Logo.jpg" alt="JV Traders Logo" class="h-12 w-auto rounded shadow-lg">
+        <div>
+          <h2 class="text-2xl font-bold text-yellow-400">JV Traders</h2>
+          <p class="text-gray-400 text-sm">© 2025 JV Traders. All Rights Reserved.</p>
+        </div>
+      </div>
+
+      <!-- Right: Contact Details -->
+      <div class="space-y-2 text-center md:text-right text-sm">
+        <p class="flex items-center justify-center md:justify-end gap-2 text-gray-300">
+          <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 5h12M9 3v2m0 16v2m6-10h6m-3-3v6m0 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Call Us:
+          <a href="tel:9845208446" class="hover:text-yellow-400">9164650985</a>,
+          <a href="tel:9845208446" class="hover:text-yellow-400">9845208446</a>,
+          <a href="tel:9844071339" class="hover:text-yellow-400">9844071339</a>
+        </p>
+        <p class="flex items-center justify-center md:justify-end gap-2 text-gray-300">
+          <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M16 12H8m0 0l4-4m-4 4l4 4m5 4H7a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v12a2 2 0 01-2 2z" />
+          </svg>
+          Email:
+          <a href="mailto:jvtraders98@gmail.com" class="hover:text-yellow-400">jvtraders98@gmail.com</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</footer>
 
     <!-- JavaScript for Carousel Functionality -->
     <script>
@@ -846,7 +956,6 @@
                     }
                 });
             }
-
             // Handle form submission
             const quoteForm = document.getElementById('quoteForm');
             if (quoteForm) {
@@ -999,5 +1108,33 @@
             });
         });
     </script>
+      <!-- Carousel script for 50-55 Ton Vehicle -->
+    <script>
+    document.querySelectorAll('.carousel').forEach(carousel => {
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        let index = 0;
+
+        const showSlide = (i) => {
+            slides.forEach((slide, idx) => {
+                slide.classList.toggle('opacity-100', idx === i);
+                slide.classList.toggle('opacity-0', idx !== i);
+            });
+            carousel.dataset.index = i;
+        };
+
+        carousel.querySelector('.carousel-prev').addEventListener('click', () => {
+            index = (index - 1 + slides.length) % slides.length;
+            showSlide(index);
+        });
+
+        carousel.querySelector('.carousel-next').addEventListener('click', () => {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+        });
+
+        showSlide(index); // Show first image
+    });
+</script>
+
 </body>
 </html> 
