@@ -118,6 +118,18 @@ nav a:hover::after {
     </div>
 </header>
 
+<!-- Add this right before </body> -->
+<script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+</body>
+</html>
+
 
   <!-- Section 1: Home - Welcome Mat -->
 <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
