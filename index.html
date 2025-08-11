@@ -3,12 +3,20 @@
 <head>
   <!-- Basic Meta -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, user-scalable=yes" />
   <meta name="description" content="JV Traders - Trusted River Sand Supplier in Bangalore for quality sand and on-time delivery." />
   <meta name="keywords" content="sand supplier Bangalore, river sand delivery, construction sand, JV Traders" />
   <meta name="author" content="JV Traders" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://jvtraders.in/" />
+  
+  <!-- Additional Mobile/Browser Compatibility -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#f4d03f" />
+  <meta name="msapplication-TileColor" content="#f4d03f" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <!-- Open Graph (Facebook, LinkedIn) -->
   <meta property="og:title" content="JV Traders | River Sand Supplier Bangalore" />
@@ -37,6 +45,18 @@
           sand: '#f4d03f',
           river: '#3498db',
           earth: '#8b4513'
+        },
+        screens: {
+          'xs': '475px',
+          'sm': '640px',
+          'md': '768px',
+          'lg': '1024px',
+          'xl': '1280px',
+          '2xl': '1536px'
+        },
+        spacing: {
+          '18': '4.5rem',
+          '88': '22rem'
         }
       }
     }
@@ -44,6 +64,101 @@
 </script>
 <!-- Load Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
+
+<!-- CSS Reset and Browser Compatibility -->
+<style>
+  /* CSS Reset and Cross-browser compatibility */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Smooth scrolling for all browsers */
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+  
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  
+  /* Touch-friendly buttons */
+  button, [role="button"], input[type="submit"], input[type="button"] {
+    min-height: 44px;
+    min-width: 44px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Improved touch targets */
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Better focus indicators */
+  :focus {
+    outline: 2px solid #f4d03f;
+    outline-offset: 2px;
+  }
+  
+  /* High contrast media queries */
+  @media (prefers-contrast: high) {
+    .bg-white { background-color: #ffffff !important; }
+    .text-gray-600 { color: #000000 !important; }
+  }
+  
+  /* Reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  /* Image optimization */
+  img {
+    max-width: 100%;
+    height: auto;
+    image-rendering: optimizeQuality;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  /* Video optimization */
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Mobile viewport fixes */
+  @media screen and (max-width: 768px) {
+    body {
+      font-size: 16px; /* Prevent zoom on iOS */
+    }
+    
+    input, textarea, select {
+      font-size: 16px; /* Prevent zoom on iOS */
+    }
+  }
+  
+  /* Safari-specific fixes */
+  @supports (-webkit-appearance: none) {
+    input[type="search"] {
+      -webkit-appearance: none;
+    }
+  }
+  
+  /* Edge/IE fixes */
+  @supports (-ms-ime-align: auto) {
+    .grid {
+      display: -ms-grid;
+    }
+  }
+</style>
 
 
   <!-- Animate.css -->
@@ -74,57 +189,60 @@
 
 <body class="bg-gray-50 font-sans leading-relaxed text-gray-800">
   <!-- Header -->
-  <header id="header" class="fixed w-full bg-white/90 backdrop-blur-md shadow-md z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+  <header id="header" class="fixed w-full bg-white/90 backdrop-blur-md shadow-md z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
       <!-- Logo -->
-      <a href="#home" class="flex items-center space-x-3">
-        <img src="images/Logo.jpg" alt="JV Traders Logo" class="h-10 w-auto rounded-md shadow-sm" />
-        <span class="text-xl sm:text-2xl font-extrabold text-blue-900">JV TRADERS</span>
+      <a href="#home" class="flex items-center space-x-2 sm:space-x-3">
+        <img src="images/Logo.jpg" alt="JV Traders Logo" class="h-8 sm:h-10 w-auto rounded-md shadow-sm" />
+        <span class="text-lg sm:text-xl md:text-2xl font-extrabold text-blue-900 leading-tight">JV TRADERS</span>
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden md:flex space-x-6 font-medium text-sm">
-        <a href="#home" class="hover:text-yellow-500 transition">Home</a>
-        <a href="#products" class="hover:text-yellow-500 transition">Products</a>
-        <a href="#vehicles" class="hover:text-yellow-500 transition">Vehicles</a>
-        <a href="#about" class="hover:text-yellow-500 transition">About</a>
-        <a href="#contact" class="hover:text-yellow-500 transition">Contact</a>
-        <a href="#location" class="hover:text-yellow-500 transition">Location</a>
+      <nav class="hidden md:flex space-x-4 lg:space-x-6 font-medium text-sm lg:text-base">
+        <a href="#home" class="hover:text-yellow-500 transition-colors duration-300 py-2 px-1">Home</a>
+        <a href="#products" class="hover:text-yellow-500 transition-colors duration-300 py-2 px-1">Products</a>
+        <a href="#vehicles" class="hover:text-yellow-500 transition-colors duration-300 py-2 px-1">Vehicles</a>
+        <a href="#about" class="hover:text-yellow-500 transition-colors duration-300 py-2 px-1">About</a>
+        <a href="#contact" class="hover:text-yellow-500 transition-colors duration-300 py-2 px-1">Contact</a>
+        <a href="#location" class="hover:text-yellow-500 transition-colors duration-300 py-2 px-1">Location</a>
       </nav>
 
       <!-- Hamburger -->
-      <button id="mobile-menu-button" type="button" aria-label="Toggle mobile menu" class="md:hidden p-2 focus:outline-none">
-        <svg class="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <button id="mobile-menu-button" type="button" aria-label="Toggle mobile menu" class="md:hidden p-2 focus:outline-none focus:ring-2 focus:ring-yellow-500 rounded-lg">
+        <svg class="w-6 h-6 sm:w-8 sm:h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
     </div>
 
     <!-- Mobile Nav -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white px-6 py-4 space-y-4 border-t text-sm font-medium">
-      <a href="#home" class="block hover:text-yellow-500">Home</a>
-      <a href="#products" class="block hover:text-yellow-500">Products</a>
-      <a href="#vehicles" class="block hover:text-yellow-500">Vehicles</a>
-      <a href="#about" class="block hover:text-yellow-500">About</a>
-      <a href="#contact" class="block hover:text-yellow-500">Contact</a>
-      <a href="#location" class="block hover:text-yellow-500">Location</a>
+    <div id="mobile-menu" class="hidden md:hidden bg-white px-4 sm:px-6 py-4 space-y-3 border-t text-base font-medium shadow-lg">
+      <a href="#home" class="block hover:text-yellow-500 py-3 px-2 rounded-lg hover:bg-yellow-50 transition-all duration-300">Home</a>
+      <a href="#products" class="block hover:text-yellow-500 py-3 px-2 rounded-lg hover:bg-yellow-50 transition-all duration-300">Products</a>
+      <a href="#vehicles" class="block hover:text-yellow-500 py-3 px-2 rounded-lg hover:bg-yellow-50 transition-all duration-300">Vehicles</a>
+      <a href="#about" class="block hover:text-yellow-500 py-3 px-2 rounded-lg hover:bg-yellow-50 transition-all duration-300">About</a>
+      <a href="#contact" class="block hover:text-yellow-500 py-3 px-2 rounded-lg hover:bg-yellow-50 transition-all duration-300">Contact</a>
+      <a href="#location" class="block hover:text-yellow-500 py-3 px-2 rounded-lg hover:bg-yellow-50 transition-all duration-300">Location</a>
     </div>
   </header>
 
 
   <!-- Hero Section -->
-  <section id="home" class="relative h-screen flex items-center justify-center pt-20">
-    <img src="images/HomePhoto.jpg" alt="Construction Sand" class="absolute inset-0 w-full h-full object-cover brightness-75" />
-    <div class="relative z-10 text-center text-white px-6 animate__animated animate__fadeInUp">
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight animate__animated animate__fadeInDown">
-        Quality Sand,<br>Delivered On Time
+  <section id="home" class="relative min-h-screen h-screen flex items-center justify-center pt-16 sm:pt-20">
+    <picture>
+      <source media="(max-width: 768px)" srcset="images/HomePhoto.jpg">
+      <img src="images/HomePhoto.jpg" alt="Construction Sand" class="absolute inset-0 w-full h-full object-cover brightness-75" loading="eager" />
+    </picture>
+    <div class="relative z-10 text-center text-white px-4 sm:px-6 max-w-4xl mx-auto animate__animated animate__fadeInUp">
+      <h1 class="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-4 sm:mb-6 leading-tight animate__animated animate__fadeInDown">
+        Quality Sand,<br class="hidden sm:block"><span class="sm:hidden"> </span>Delivered On Time
       </h1>
-      <p class="mb-6 text-lg animate__animated animate__fadeInUp animate__delay-1s">
+      <p class="mb-6 sm:mb-8 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto animate__animated animate__fadeInUp animate__delay-1s">
         Your trusted supplier for construction, landscaping, and specialty sand across Bangalore.
       </p>
-      <div class="flex flex-wrap justify-center gap-4 animate__animated animate__fadeInUp animate__delay-2s">
-        <a href="#contact" class="bg-sand text-white px-6 py-3 rounded-full font-semibold hover:bg-yellow-600 transition duration-300">Free Quote</a>
-        <a href="#products" class="bg-white text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">View Products</a>
+      <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 animate__animated animate__fadeInUp animate__delay-2s">
+        <a href="#contact" class="bg-sand text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-yellow-600 transition duration-300 text-base sm:text-lg shadow-lg">Free Quote</a>
+        <a href="#products" class="bg-white text-gray-800 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-gray-100 transition duration-300 text-base sm:text-lg shadow-lg">View Products</a>
       </div>
     </div>
   </section>
@@ -151,10 +269,10 @@
 </script>
 
 <!-- Products Section -->
-<section id="products" class="py-20 bg-white">
+<section id="products" class="py-16 sm:py-20 bg-white">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-4xl font-bold text-center mb-12">Our Premium Sand Products</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12">Our Premium Sand Products</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
 
       <!-- Grade A -->
       <div class="product-card relative bg-white rounded-2xl shadow-2xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-4xl animate__fadeInUp">
@@ -678,10 +796,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 <!-- Vehicles Section -->
-<section id="vehicles" class="py-20 bg-white">
+<section id="vehicles" class="py-16 sm:py-20 bg-white">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-4xl font-bold text-center mb-12">Our Heavy-Duty Vehicle Fleet</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12">Our Heavy-Duty Vehicle Fleet</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
 
       <!-- Vehicle Card Template -->
       <!-- Tractor 5 - 7 Tons -->
@@ -825,7 +943,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <div id="modal-content" class="rounded-lg overflow-hidden"></div>
   </div>
 </div>
-
+<!-- Modal and Carousel Functionality -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const modals = document.getElementById('media-modal');
@@ -887,22 +1005,23 @@ document.addEventListener('DOMContentLoaded', () => {
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <!--  About Us -->
-<section id="about" class="py-20 bg-gray-50">
-  <div class="container mx-auto px-6">
-    <div class="flex flex-col md:flex-row items-center gap-12">
+<section id="about" class="py-16 sm:py-20 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6">
+    <div class="flex flex-col lg:flex-row items-center gap-8 sm:gap-12">
       <!-- Image -->
-      <div class="md:w-1/2 animate__animated animate__fadeInLeft" data-aos="fade-right" data-aos-duration="1000">
+      <div class="w-full lg:w-1/2 animate__animated animate__fadeInLeft" data-aos="fade-right" data-aos-duration="1000">
         <img 
           src="images/Team.jpg"
           alt="Company trucks and team members"
-          class="rounded-lg shadow-xl w-full h-72 md:h-96 object-cover object-center transition-transform duration-700 hover:scale-105 cursor-zoom-in"
+          class="rounded-lg shadow-xl w-full h-64 sm:h-72 lg:h-80 xl:h-96 object-cover object-center transition-transform duration-700 hover:scale-105 cursor-zoom-in"
           onclick="openImageModal(this.src)"
+          loading="lazy"
         >
       </div>
 
       <!-- Text -->
-      <div class="md:w-1/2 animate__animated animate__fadeInRight" data-aos="fade-left" data-aos-duration="1000">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Your Reliable Local Sand Supplier</h2>
+      <div class="w-full lg:w-1/2 animate__animated animate__fadeInRight" data-aos="fade-left" data-aos-duration="1000">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Your Reliable Local Sand Supplier</h2>
         <p class="text-gray-700 text-lg mb-4 text-justify leading-relaxed">
           Serving the community for over 20 years, <strong class="text-gray-800">JV Traders</strong> has become a trusted name in the construction and landscaping industries. With a dedicated team, we ensure that high-quality river sand, coarse sand, and other materials reach our customers on time and with guaranteed reliability.
         </p>
@@ -949,14 +1068,14 @@ function openImageModal(src) {
 
 
 <!-- Section 4: Contact & Quote Request -->
-<section id="contact" class="py-20 bg-white">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-12 animate__animated animate__fadeInDown">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Get a Free Quote Today</h2>
-      <p class="text-lg text-gray-600 mt-2">Fill out the form or message us directly on WhatsApp.</p>
+<section id="contact" class="py-16 sm:py-20 bg-white">
+  <div class="container mx-auto px-4 sm:px-6">
+    <div class="text-center mb-8 sm:mb-12 animate__animated animate__fadeInDown">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900">Get a Free Quote Today</h2>
+      <p class="text-base sm:text-lg text-gray-600 mt-2">Fill out the form or message us directly on WhatsApp.</p>
     </div>
 
-    <div class="max-w-5xl mx-auto bg-white p-8 rounded-3xl shadow-2xl grid grid-cols-1 md:grid-cols-2 gap-12 animate__animated animate__fadeInUp">
+    <div class="max-w-6xl mx-auto bg-white p-4 sm:p-6 lg:p-8 rounded-3xl shadow-2xl grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 animate__animated animate__fadeInUp">
       <!-- Contact Form -->
       <div class="space-y-4" id="quoteForm">
         <div>
@@ -1053,6 +1172,7 @@ function openImageModal(src) {
   </div>
 </section>
 
+<!-- WhatsApp Message Function -->
 <script>
 function sendWhatsApp() {
   const name = document.getElementById('name').value.trim();
@@ -1080,13 +1200,13 @@ Notes: ${notes}`;
 
 
 <!-- Google Maps Section with Side-by-Side Layout -->
-<section class="py-20 bg-white" id="location">
-  <div class="container mx-auto px-4">
-    <div class="text-center mb-12 animate__animated animate__fadeInDown" data-aos="fade-down">
-      <h2 class="text-4xl font-bold text-gray-800">Find Us on Google Maps</h2>
+<section class="py-16 sm:py-20 bg-white" id="location">
+  <div class="container mx-auto px-4 sm:px-6">
+    <div class="text-center mb-8 sm:mb-12 animate__animated animate__fadeInDown" data-aos="fade-down">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800">Find Us on Google Maps</h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center animate__animated animate__fadeInUp" data-aos="fade-up">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center animate__animated animate__fadeInUp" data-aos="fade-up">
       <!-- Left: Image -->
       <div data-aos="zoom-in-right">
         <img src="images/location-banner.jpg" alt="Location view"
@@ -1098,8 +1218,8 @@ Notes: ${notes}`;
         <div class="rounded-3xl shadow-xl overflow-hidden animate__animated animate__zoomIn">
           <iframe
             src="https://www.google.com/maps?q=JV+TRADERS+River+Sand+Supplier,+31,+Ground+Floor,+NG+Gollahalli,+Hennur+Main+Rd,+Dodda+Gubbi,+Bengaluru,+Karnataka+560077&output=embed"
-            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+            width="100%" height="250" class="sm:h-80 lg:h-96" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="JV Traders Location Map">
           </iframe>
         </div>
 
@@ -1140,8 +1260,8 @@ Notes: ${notes}`;
 
 <!-- Premium Footer -->
 <footer class="bg-gray-900 text-white">
-  <div class="container mx-auto px-6 py-12">
-    <div class="flex flex-col md:flex-row justify-between items-center gap-8 animate__animated animate__fadeInUp">
+  <div class="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <div class="flex flex-col lg:flex-row justify-between items-center gap-6 sm:gap-8 animate__animated animate__fadeInUp">
 
       <!-- Left: Logo and Branding -->
       <div class="flex items-center space-x-4 text-center md:text-left">
